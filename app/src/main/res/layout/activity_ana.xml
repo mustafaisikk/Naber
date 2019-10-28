@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AnaActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/Anaactivity_Appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include layout="@layout/actionbar_app"
+            android:id="@+id/AnaActivity_ActionBar"/>
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/Anaactivity_Tabbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/AnaActivity_ActionBar"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            android:background="@color/green"
+            app:tabIndicatorColor="@android:color/white">
+        </com.google.android.material.tabs.TabLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/AnaActivity_ViewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/Anaactivity_Appbar"
+        android:layout_marginTop="1dp" />
+
+</RelativeLayout>

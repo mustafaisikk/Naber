@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Register_Activity"
+    android:background="@drawable/giris_arka_plan">
+
+    <include
+        android:id="@+id/action_bar_register"
+        layout="@layout/actionbar_app" />
+
+    <TextView
+        android:id="@+id/Register_create_new_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Create_new_account_text"
+        android:textSize="30dp"
+        android:layout_below="@+id/action_bar_register"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="20dp"
+        />
+
+    <EditText
+        android:id="@+id/register_Edittext_Un"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Register_create_new_text"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="20dp"
+        android:hint="@string/user_name_Et"
+        android:inputType="text"/>
+
+    <EditText
+        android:id="@+id/register_Edittext_Tp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/register_Edittext_Un"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:hint="@string/Tel_Et"
+        android:inputType="phone"/>
+
+    <EditText
+        android:id="@+id/register_Edittext_Pw"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/register_Edittext_Tp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:hint="@string/Password_Et"
+        android:inputType="textPassword"/>
+    <Button
+        android:id="@+id/register_create_account"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/create_acount_button"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="100dp"
+        android:background="@android:color/holo_red_dark"
+        android:textColor="@android:color/white"/>
+</RelativeLayout>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    tools:context=".MainActivity"
+    android:background="@drawable/giris_arka_plan">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/naber_logo"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/textView"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="false"
+        android:layout_alignParentEnd="false"
+        android:layout_marginTop="50dp"
+        android:layout_centerHorizontal="true"
+        android:text="@string/app_name"
+        android:textColor="@android:color/black"
+        android:textSize="50sp" />
+    <Button
+        android:id="@+id/i_have_account_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/i_have_account"
+        android:background="@color/Login_activity_new_button"
+        android:textColor="@android:color/white"
+        android:layout_above="@+id/create_new_account_button"
+        android:layout_marginBottom="30dp"
+        />
+    <Button
+        android:id="@+id/create_new_account_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/create_new_account"
+        android:background="@color/Login_activity_login_button"
+        android:textColor="@android:color/white"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="55dp"
+        />
+</RelativeLayout>

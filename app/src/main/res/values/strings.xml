@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Naber</string>
+    <string name="create_new_account">Yeni Hesap Oluştur</string>
+    <string name="i_have_account">Mevcut Hesabım Var</string>
+    <string name="register_text">REGİSTER EKRANI</string>
+    <string name="Create_new_account_text">Yeni Hesap Oluştur</string>
+    <string name="user_name_Et">Adınız:</string>
+    <string name="Tel_Et">Telefon: </string>
+    <string name="Password_Et">Parola: </string>
+    <string name="create_acount_button">HESAP OLUŞTUR</string>
+    <string name="login_text">GİRİŞ YAP</string>
+    <string name="Login_button">GİRİŞ YAP</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
