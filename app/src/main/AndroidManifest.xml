@@ -15,8 +15,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".ChatActivity"
-            android:parentActivityName=".AnaActivity"></activity>
+        <activity android:name=".ImageViewerActivity"></activity>
+        <activity
+            android:name=".ChatActivity"
+            android:parentActivityName=".AnaActivity" />
         <activity android:name=".ProfileActivity" />
         <activity
             android:name=".FindFriendsActivity"
@@ -25,8 +27,9 @@
         <activity
             android:name=".SettingsActivity"
             android:parentActivityName=".AnaActivity" />
-        <activity android:name=".GroupChat_Activity"
-            android:parentActivityName=".AnaActivity"/>
+        <activity
+            android:name=".GroupChat_Activity"
+            android:parentActivityName=".AnaActivity" />
         <activity
             android:name=".Welcome_Activity"
             android:parentActivityName=".MainActivity" />
