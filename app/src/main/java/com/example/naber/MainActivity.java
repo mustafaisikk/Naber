@@ -32,9 +32,16 @@ public class MainActivity extends AppCompatActivity {
         Button_register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 Intent Register_intent = new Intent(MainActivity.this, Register_Activity.class);
                 startActivity(Register_intent);
+
+                /*
+                Intent Register_intent = new Intent(MainActivity.this, PhoneLogin.class);
+                startActivity(Register_intent);
+                */
             }
+
         });
     }
 }

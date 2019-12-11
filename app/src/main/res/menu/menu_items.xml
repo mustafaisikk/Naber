@@ -2,6 +2,24 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
+        android:id="@+id/Find_Friends"
+        android:title="Arkadaş Bul"
+        app:showAsAction="never">
+
+    </item>
+
+    <item
+        android:id="@+id/User_Settings"
+        android:title="Ayarlar"
+        app:showAsAction="never">
+
+    </item>
+    <item
+        android:id="@+id/Create_Group_Message"
+        android:title="Grup Oluştur"
+        app:showAsAction="never">
+    </item>
+    <item
         android:id="@+id/Quit"
         android:title="Çıkış Yap"
         app:showAsAction="never">

@@ -15,6 +15,9 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.iid.FirebaseInstanceId;
 
 public class Welcome_Activity extends AppCompatActivity {
 
@@ -25,6 +28,8 @@ public class Welcome_Activity extends AppCompatActivity {
     private FirebaseAuth auth;
     private FirebaseUser Current_user;
 
+    private DatabaseReference usersRef;
+
     public void init(){
         action_bar_login = findViewById(R.id.actionbarlogin);
         setSupportActionBar(action_bar_login);
@@ -33,6 +38,7 @@ public class Welcome_Activity extends AppCompatActivity {
 
         auth = FirebaseAuth.getInstance();
         Current_user = auth.getCurrentUser();
+        usersRef = FirebaseDatabase.getInstance().getReference().child("Kullanicilar");
 
         Phone = findViewById(R.id.register_Edittext_Ph);
         Password = findViewById(R.id.register_Edittext_Pw);;
@@ -60,12 +66,26 @@ public class Welcome_Activity extends AppCompatActivity {
 
         auth.signInWithEmailAndPassword(Phone_Test,Password_Text).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
-            public void onComplete(@NonNull Task<AuthResult> task) {
+            public void onComplete(Task<AuthResult> task) {
                 if(task.isSuccessful()){
-                    Toast.makeText(Welcome_Activity.this,"Giriş Başarılı.",Toast.LENGTH_LONG).show();
-                    Intent ıntent = new Intent(Welcome_Activity.this,AnaActivity.class);
-                    startActivity(ıntent);
-                    finish();
+                    String currentUserID = auth.getCurrentUser().getUid();
+                    String devicesToken = FirebaseInstanceId.getInstance().getToken();
+
+                    usersRef.child(currentUserID).child("device_token").setValue(devicesToken).addOnCompleteListener(new OnCompleteListener<Void>() {
+                        @Override
+                        public void onComplete(@NonNull Task<Void> task) {
+                            if(task.isSuccessful()){
+                                Toast.makeText(Welcome_Activity.this,"Giriş Başarılı.",Toast.LENGTH_LONG).show();
+                                Intent ıntent = new Intent(Welcome_Activity.this,AnaActivity.class);
+                                ıntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                                startActivity(ıntent);
+                                finish();
+                            }
+                        }
+                    });
+
+
+
                 }
                 else{
                     Toast.makeText(Welcome_Activity.this,"Hatalı Giriş.",Toast.LENGTH_LONG).show();

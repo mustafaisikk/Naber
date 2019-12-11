@@ -6,11 +6,12 @@
     tools:context=".RequestFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:textSize="35dp"
-        android:text="İstekler Ekranı" />
 
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/Chat_requests_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"/>
 </RelativeLayout>

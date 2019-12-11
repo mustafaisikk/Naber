@@ -20,14 +20,18 @@ public class TabsAdapter extends FragmentPagerAdapter {
         switch (position){
 
             case 0:
-                RequestFragment requestFragment = new RequestFragment();
-                return requestFragment;
+                ChatFragment chatFragment = new ChatFragment();
+                return chatFragment;
             case 1:
                 ChatsFragment chatsFragment = new ChatsFragment();
                 return chatsFragment;
             case 2:
                 FriendsFragment friendsFragment = new FriendsFragment();
                 return friendsFragment;
+            case 3:
+                RequestFragment requestFragment = new RequestFragment();
+                return requestFragment;
+
             default:
                 return null;
 
@@ -37,7 +41,7 @@ public class TabsAdapter extends FragmentPagerAdapter {
 
     @Override
     public int getCount() {
-        return 3;
+        return 4;
     }
 
     @Nullable
@@ -46,11 +50,13 @@ public class TabsAdapter extends FragmentPagerAdapter {
 
         switch (position){
             case 0:
-                return "İSTEKLER";
-            case 1:
                 return "MESAJLAR";
+            case 1:
+                return "GRUPLAR";
             case 2:
                 return "ARKADAŞLAR";
+            case 3:
+                return "İSTEKLER";
             default:
                 return null;
         }

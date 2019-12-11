@@ -3,6 +3,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.naber">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -11,16 +15,25 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".ChatActivity"
+            android:parentActivityName=".AnaActivity"></activity>
+        <activity android:name=".ProfileActivity" />
+        <activity
+            android:name=".FindFriendsActivity"
+            android:parentActivityName=".AnaActivity" />
+        <activity android:name=".PhoneLogin" />
+        <activity
+            android:name=".SettingsActivity"
+            android:parentActivityName=".AnaActivity" />
+        <activity android:name=".GroupChat_Activity"
+            android:parentActivityName=".AnaActivity"/>
         <activity
             android:name=".Welcome_Activity"
             android:parentActivityName=".MainActivity" />
-
         <activity android:name=".MainActivity" />
-
         <activity
             android:name=".Register_Activity"
-            android:parentActivityName=".MainActivity"/>
-
+            android:parentActivityName=".MainActivity" />
         <activity android:name=".AnaActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -28,6 +41,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+            android:theme="@style/Base.Theme.AppCompat" />
     </application>
 
 </manifest>
