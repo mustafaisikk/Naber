@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".GroupChat_Activity"
-    android:background="@android:color/darker_gray">
+    android:background="@drawable/bb">
 
     <include
         android:id="@+id/group_chat_actinbar"

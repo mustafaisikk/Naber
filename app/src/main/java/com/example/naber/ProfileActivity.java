@@ -2,6 +2,7 @@ package com.example.naber;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.os.Bundle;
 import android.view.View;
@@ -25,6 +26,7 @@ import de.hdodenhof.circleimageview.CircleImageView;
 
 public class ProfileActivity extends AppCompatActivity {
 
+    private Toolbar profileToolBar;
     private String receiver_User_Id,current_State,sender_User_ID;
 
     private CircleImageView visited_profile_image;
@@ -293,6 +295,11 @@ public class ProfileActivity extends AppCompatActivity {
         user_profil_status = findViewById(R.id.Visit_profile_Status);
         send_message = findViewById(R.id.Visit_Profile_request_button);
         decline_message = findViewById(R.id.Visit_Profile_declare_request_button);
+
+        profileToolBar = findViewById(R.id.actionbarprofile);
+        setSupportActionBar(profileToolBar);
+        getSupportActionBar().setTitle("Profil Bilgileri");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         current_State = "new";
     }

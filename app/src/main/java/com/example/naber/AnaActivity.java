@@ -166,13 +166,11 @@ public class AnaActivity extends AppCompatActivity {
 
     private void GotoFindFriends() {
         Intent intent = new Intent(AnaActivity.this,FindFriendsActivity.class);
-        //intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(intent);
     }
 
     private void GoToSettings() {
         Intent intent = new Intent(AnaActivity.this,SettingsActivity.class);
-        //intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(intent);
     }
 
@@ -194,7 +192,7 @@ public class AnaActivity extends AppCompatActivity {
             }
         });
 
-        builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+        builder.setNegativeButton("İptal", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 dialog.cancel();

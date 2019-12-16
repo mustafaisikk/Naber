@@ -19,11 +19,13 @@
         <activity
             android:name=".ChatActivity"
             android:parentActivityName=".AnaActivity" />
-        <activity android:name=".ProfileActivity" />
+        <activity android:name=".ProfileActivity"
+            android:parentActivityName=".FindFriendsActivity"/>
         <activity
             android:name=".FindFriendsActivity"
             android:parentActivityName=".AnaActivity" />
-        <activity android:name=".PhoneLogin" />
+        <activity android:name=".PhoneLogin"
+            android:parentActivityName=".MainActivity"/>
         <activity
             android:name=".SettingsActivity"
             android:parentActivityName=".AnaActivity" />

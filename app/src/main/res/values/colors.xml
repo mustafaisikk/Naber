@@ -6,4 +6,5 @@
 <color name="green">#008000</color>
 <color name="Login_activity_login_button"> #d80035 </color>
 <color name="Login_activity_new_button">#480068</color>
+<color name="btn_font">#02323d</color>
 </resources>

@@ -163,7 +163,7 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.MessageV
                         .into(holder.messageReceiverPicture);
             }
         }
-
+        // mesaj silme kısmı
         if (fromUserID.equals(messageSenderID)){
 
 
@@ -193,7 +193,6 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.MessageV
                                 }
                                 else if(which == 1){
 
-                                    String pdf_name = userMessageLists.get(position).getMessageID();
                                     storageReference.child(userMessageLists.get(position).getMessageID() + "."+userMessageLists.get(position).getType()).getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
                                         @Override
                                         public void onSuccess(Uri uri) {

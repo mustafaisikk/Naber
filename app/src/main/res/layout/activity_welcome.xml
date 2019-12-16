@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Welcome_Activity"
-    android:background="@drawable/giris_arka_plan">
+    android:background="@drawable/bb">
 
     <include layout="@layout/actionbar_app"
         android:id="@+id/actionbarlogin"/>
@@ -52,6 +52,6 @@
         android:layout_marginEnd="20dp"
         android:layout_below="@+id/register_Edittext_Pw"
         android:layout_marginTop="50dp"
-        android:background="@android:color/holo_red_dark"
+        android:background="@drawable/btn_create"
         android:textColor="@android:color/white"/>
 </RelativeLayout>

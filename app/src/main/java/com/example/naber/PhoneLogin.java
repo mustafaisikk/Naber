@@ -2,6 +2,7 @@ package com.example.naber;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -27,6 +28,7 @@ public class PhoneLogin extends AppCompatActivity {
 
     private Button Send_code,Verify_button;
     private EditText Phone_number,Verify_number;
+    private Toolbar actionbar_login;
 
     private PhoneAuthProvider.OnVerificationStateChangedCallbacks callbaks;
 
@@ -51,6 +53,11 @@ public class PhoneLogin extends AppCompatActivity {
         Phone_number = findViewById(R.id.Phone_Login_phoneNumber);
         Verify_number = findViewById(R.id.Phone_Login_Code);
         progressDialog =new ProgressDialog(this);
+
+        actionbar_login=(Toolbar) findViewById(R.id.actionbar_phonelogin);
+        setSupportActionBar(actionbar_login);
+        getSupportActionBar().setTitle("Telefon Numarası Doğrulama");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         Send_code.setOnClickListener(new View.OnClickListener() {
             @Override

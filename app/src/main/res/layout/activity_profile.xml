@@ -4,8 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/profile_activity"
+    android:background="@drawable/bb"
     tools:context=".ProfileActivity">
+
+    <include layout="@layout/actionbar_app"
+        android:id="@+id/actionbarprofile"/>
 
 
     <de.hdodenhof.circleimageview.CircleImageView
@@ -56,7 +59,7 @@
         android:layout_marginRight="65dp"
         android:layout_marginTop="15dp"
         android:textColor="@android:color/background_light"
-        android:background="@color/green"
+        android:background="@drawable/btn_create"
         android:textStyle="bold"
         android:textSize="20sp"
         android:text="Mesaj Gönder"
@@ -71,7 +74,7 @@
         android:layout_marginRight="65dp"
         android:layout_marginTop="5dp"
         android:textColor="@android:color/background_light"
-        android:background="@color/green"
+        android:background="@drawable/btn_create"
         android:textStyle="bold"
         android:textSize="20sp"
         android:text="Mesaj İsteğini Reddet"

@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SettingsActivity">
+    tools:context=".SettingsActivity"
+    android:background="@drawable/bb">
 
     <include
         android:id="@+id/Settings_chat_actinbar"
@@ -22,7 +23,7 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="80dp"
-        app:civ_border_color="@color/colorPrimary"
+        app:civ_border_color="@color/btn_font"
         app:civ_border_width="5dp"/>
 
     <EditText
@@ -34,7 +35,7 @@
         android:hint="Kullanıcı Adı"
         android:textAlignment="center"
         android:drawableStart="@drawable/edit_profile"
-        android:textColor="@color/colorPrimaryDark"
+        android:textColor="@android:color/black"
         android:textStyle="bold"
         android:layout_marginStart="15dp"
         android:layout_marginEnd="15dp"
@@ -50,7 +51,7 @@
         android:hint="Hey, i am online..."
         android:textAlignment="center"
         android:drawableStart="@drawable/edit_status"
-        android:textColor="@color/colorPrimaryDark"
+        android:textColor="@android:color/black"
         android:textStyle="bold"
         android:layout_marginStart="15dp"
         android:layout_marginEnd="15dp"
@@ -67,7 +68,7 @@
         android:textAlignment="center"
         android:textColor="@android:color/background_light"
         android:textStyle="bold"
-        android:background="@color/green"
+        android:background="@drawable/btn_create"
         android:layout_marginStart="15dp"
         android:layout_marginEnd="15dp"
         android:padding="6dp"

@@ -50,13 +50,13 @@ public class TabsAdapter extends FragmentPagerAdapter {
 
         switch (position){
             case 0:
-                return "MESAJLAR";
+                return "Mesajlar";
             case 1:
-                return "GRUPLAR";
+                return "Gruplar";
             case 2:
-                return "ARKADAŞLAR";
+                return "Arkadaşlar";
             case 3:
-                return "İSTEKLER";
+                return "İstekler";
             default:
                 return null;
         }
